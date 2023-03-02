@@ -13,9 +13,10 @@ class TutorialService {
     // }
 
 
-    async getAll(condition) {
+    async getAll(condition, order) {
         return this.tutorial.findAll({
-            where: condition
+            where: condition,
+            order: order
         }).catch(function (err) {
             console.log(err);
         });
