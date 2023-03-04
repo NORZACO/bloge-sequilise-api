@@ -14,3 +14,10 @@ GRANT ALL PRIVILEGES ON blogedbase.* TO 'pageAdministrator'@'localhost' IDENTIFI
 
 -- Grant all privileges on the 'blogedbase' database to the 'pageAdmin' user
 GRANT ALL PRIVILEGES ON blogedbase.* TO 'pageAdmin'@'localhost' IDENTIFIED BY 'Passord1$@bruker';
+
+
+
+
+
+
+SELECT `id`, `title`, `description`, `published` FROM `tutorials` AS `tutorial` WHERE (`tutorial`.`description` LIKE '%the%') ORDER BY `tutorial`.`title` ASC LIMIT 2, 2;

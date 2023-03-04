@@ -4,17 +4,10 @@ class TutorialService {
         this.tutorial = db.tutorial;
     }
 
-    // async getAll() {
-    //     return this.tutorial.findAll({
-    //         where: {}
-    //     }).catch(function (err) {
-    //         console.log(err);
-    //     });
-    // }
-
-
-    async getAll(condition, order) {
+    async getAll(condition, order, pagination) {
         return this.tutorial.findAll({
+            limit: pagination.limit,
+            offset: pagination.offset,
             where: condition,
             order: order
         }).catch(function (err) {
@@ -23,4 +16,6 @@ class TutorialService {
     }
     
 }
+
+
 module.exports = TutorialService;

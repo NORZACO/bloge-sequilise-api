@@ -3,3 +3,8 @@
 
 # Ordering
 http://localhost:3000/tutorials?sort=published:desc,title:asc
+
+
+
+
+http://localhost:3000/tutorials?page=2&size=1&title=s&sort=title:desc
