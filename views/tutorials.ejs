@@ -121,7 +121,8 @@
           <% tutorials.forEach(function(tutorial) { %>
             <div class="col">
               <div class="card shadow-sm">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                
+                <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                   xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                   preserveAspectRatio="xMidYMid slice" focusable="false">
                   <title>Placeholder</title>
@@ -129,7 +130,13 @@
                     dy=".3em"></text>
                   <%=tutorial.title%>
                     </text>
-                </svg>
+                </svg> -->
+
+                <!-- image-->
+                <img class="card-img-top" src="<%=tutorial.picture %>" alt="<%=tutorial.title%>" />
+
+
+
                 <div class="card-body">
                   <p class="card-text">
                     <%=tutorial.title%>

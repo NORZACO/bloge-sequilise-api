@@ -8,6 +8,9 @@ module.exports = (sequelize, Sequelize) => {
       },
       published: {
         type: Sequelize.BOOLEAN
+      },// picture
+      picture: {
+        type: Sequelize.STRING
       }
     },{
       timestamps: false
