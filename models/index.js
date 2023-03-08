@@ -2,9 +2,12 @@ const Sequelize = require('sequelize');
 const fs = require('fs');
 const path = require('path');
 const basename = path.basename(__filename);
+const logoSymbol = require('../routes/logingslogo')
 require('dotenv').config();
 
-const sequelize = new Sequelize('blogedbase', 'blogeradmin', 'MyPa55w0rd#blogedbase@', {
+const sequelize = new Sequelize(process.env.DATABASE_NAME, 
+    process.env.ADMIN_USERNAME,
+    process.env.ADMIN_PASSWORD, {
     dialect: 'mysql',
     host: '127.0.0.1',
 });
@@ -13,6 +16,7 @@ const sequelize = new Sequelize('blogedbase', 'blogeradmin', 'MyPa55w0rd#blogedb
     try {
         await sequelize.authenticate();
         console.log('Connection has been established successfully.');
+        console.log(logoSymbol);
     } catch (error) {
         console.error('Unable to connect to the database:', error);
     }
