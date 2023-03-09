@@ -5,7 +5,8 @@ const basename = path.basename(__filename);
 const logoSymbol = require('../routes/logingslogo')
 require('dotenv').config();
 
-const sequelize = new Sequelize(process.env.DATABASE_NAME, 
+const sequelize = new Sequelize(
+    process.env.DATABASE_NAME,
     process.env.ADMIN_USERNAME,
     process.env.ADMIN_PASSWORD, {
     dialect: 'mysql',
